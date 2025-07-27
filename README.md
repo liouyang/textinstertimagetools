@@ -165,15 +165,11 @@ Markdown
 以下是项目的一些关键界面截图，帮助您直观了解其功能和用户体验：
 
 ### 1. 主界面：文章生成参数配置
-
-（此处放置你的主界面截图，应清晰展示文章主题、受众、风格、长度、关键词等配置输入框和选项）
-`![主界面：文章生成参数配置](./screenshots/screenshots/381753597131_.pic.jpg)`
-`![主界面：文章生成参数配置](./screenshots/screenshots/screenshots/391753597145_.pic.jpg)`
+`![img](https://github.com/liouyang/textinstertimagetools/blob/main/screenshots/381753597131_.pic.jpg)`
+`![img](https://github.com/liouyang/textinstertimagetools/blob/main/screenshots/391753597145_.pic.jpg)`
 
 ### 2. 生成文章示例（HTML 页面预览）
-
-（此处放置一个在浏览器中打开的，带有文本内容和智能插入图片效果的最终 HTML 文章页面的截图）
-`![生成文章示例（HTML 页面预览）](./screenshots/screenshots/WeChatb45b5a8f9a40f0b1f64eb3d52fffcbcd.jpg)`
+`![img](https://github.com/liouyang/textinstertimagetools/blob/main/screenshots/WeChatb45b5a8f9a40f0b1f64eb3d52fffcbcd.jpg)`
 
 ---
 
