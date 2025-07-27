@@ -89,6 +89,7 @@ Markdown
 
 ## 项目文件结构
 
+```bash
 .
 ├── streamlit_app.py           # Streamlit 主应用入口，负责所有UI交互和核心流程编排
 ├── batch_article_generator.py # 封装批量生成文章的整体流程，包括标题、内容和图片生成调度
@@ -103,7 +104,7 @@ Markdown
 ├── generated_articles_humanized/ # 存储LLM生成原始文章文本的目录
 ├── generated_output/          # 最终生成的HTML文章页面存放目录
 ├── .gitignore                 # Git 版本控制忽略规则文件
-└── README.md                  # 本项目说明文档
+└── README.md
 
 ## 如何运行项目
 
@@ -165,11 +166,12 @@ Markdown
 以下是项目的一些关键界面截图，帮助您直观了解其功能和用户体验：
 
 ### 1. 主界面：文章生成参数配置
-`![img](https://github.com/liouyang/textinstertimagetools/blob/main/screenshots/381753597131_.pic.jpg)`
-`![img](https://github.com/liouyang/textinstertimagetools/blob/main/screenshots/391753597145_.pic.jpg)`
+`![image](https://github.com/liouyang/textinstertimagetools/blob/main/screenshots/381753597131_.pic.jpg)`
+
+`![image](https://github.com/liouyang/textinstertimagetools/blob/main/screenshots/391753597145_.pic.jpg)`
 
 ### 2. 生成文章示例（HTML 页面预览）
-`![img](https://github.com/liouyang/textinstertimagetools/blob/main/screenshots/WeChatb45b5a8f9a40f0b1f64eb3d52fffcbcd.jpg)`
+`![image](https://github.com/liouyang/textinstertimagetools/blob/main/screenshots/WeChatb45b5a8f9a40f0b1f64eb3d52fffcbcd.jpg)`
 
 ---
 
