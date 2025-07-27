@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分类列表</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            color: #0056b3;
+            text-align: center;
+        }
+        .category-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .category-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            border-left: 5px solid #007bff;
+            transition: transform 0.2s ease-in-out;
+            cursor: pointer; /* 指示它可点击 */
+        }
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* 悬停时增强阴影效果 */
+        }
+        .category-card h2 {
+            margin-top: 0;
+            color: #007bff;
+            font-size: 1.2em;
+        }
+        .category-card p {
+            margin: 5px 0;
+            line-height: 1.4;
+        }
+        .category-card strong {
+            color: #555;
+        }
+        .category-type {
+            font-weight: bold;
+            color: #28a745; /* Type 0 为绿色 */
+        }
+        .category-type.type-1 {
+            color: #ffc107; /* Type 1 为黄色 */
+        }
+        .status-active {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .status-inactive {
+            color: #dc3545;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>分类列表</h1>
+    <div class="category-container">
+        {% for category in categories %}
+        <div class="category-card" onclick="window.location.href='/articles/{{ category.id }}'">
+            <h2>{{ category.name }}</h2>
+            <p><strong>ID:</strong> {{ category.id }}</p>
+            <p><strong>类型:</strong>
+                <span class="category-type {% if category.type == 1 %}type-1{% endif %}">
+                    {% if category.type == 0 %}赛道{% else %}养号文{% endif %}
+                </span>
+            </p>
+            <p><strong>简介:</strong> {{ category.intro }}</p>
+            <p><strong>文章数:</strong> {{ category.article_count }}</p>
+            <p><strong>状态:</strong>
+                <span class="{% if category.status == 1 %}status-active{% else %}status-inactive{% endif %}">
+                    {% if category.status == 1 %}活跃{% else %}非活跃{% endif %}
+                </span>
+            </p>
+            {% if category.img %}
+            <p><strong>图片:</strong> <img src="{{ category.img }}" alt="Category Image" style="max-width: 100px; height: auto; display: block; margin-top: 5px;"></p>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

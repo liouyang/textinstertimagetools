@@ -1,0 +1,3 @@
+[server]
+enableCORS = true
+# enableXsrfProtection = false # 如果你确定不需要XSRF保护，可以取消注释这行
